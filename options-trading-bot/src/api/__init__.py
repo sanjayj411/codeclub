@@ -204,6 +204,88 @@ async def run_monte_carlo(
 
 # Schwab Broker Integration Endpoints
 
+@app.get("/schwab/test")
+async def test_schwab_connection(account_number: str, token: str):
+    """
+    Test Schwab API connection without errors
+    
+    Args:
+        account_number: Schwab account number
+        token: Schwab OAuth token
+        
+    Returns:
+        Connection status and account info
+    """
+    try:
+        broker = SchwabBrokerAPI(account_number, token)
+        
+        # Test 1: Get account info
+        account = broker.get_account_info()
+        if not account:
+            return {
+                "status": "FAILED",
+                "test": "account_info",
+                "error": "Could not retrieve account info",
+                "troubleshooting": [
+                    "Check if token is valid and not expired",
+                    "Verify account number is correct",
+                    "Check API endpoint URL is accessible"
+                ]
+            }
+        
+        # Test 2: Get quote (for AAPL as test)
+        quote = broker.get_quote("AAPL")
+        if not quote:
+            return {
+                "status": "FAILED",
+                "test": "quote",
+                "error": "Could not retrieve quote for AAPL",
+                "account": account.get('account_number'),
+                "troubleshooting": [
+                    "Check if quote API endpoint is accessible",
+                    "Verify market is open (not after hours)",
+                    "Try again during market hours"
+                ]
+            }
+        
+        # Test 3: Get price history (for AAPL as test)
+        history = broker.get_price_history("AAPL", days=5)
+        if not history:
+            return {
+                "status": "FAILED",
+                "test": "price_history",
+                "error": "Could not retrieve price history for AAPL",
+                "account": account.get('account_number'),
+                "quote": quote,
+                "troubleshooting": [
+                    "Check if pricehistory API endpoint is accessible",
+                    "Verify API has proper scopes/permissions",
+                    "Try with different time period",
+                    "Check API rate limits"
+                ]
+            }
+        
+        return {
+            "status": "SUCCESS",
+            "account": account,
+            "test_quote": quote,
+            "price_history_candles": len(history),
+            "message": "All tests passed. Your Schwab connection is working!"
+        }
+    
+    except Exception as e:
+        logger.error(f"Error testing Schwab connection: {str(e)}")
+        return {
+            "status": "ERROR",
+            "error": str(e),
+            "troubleshooting": [
+                "Verify token format and validity",
+                "Check account number format",
+                "Ensure network connectivity",
+                "Check Schwab API service status at https://developer.schwab.com"
+            ]
+        }
+
 @app.post("/schwab/analyze")
 async def analyze_with_schwab(request: SchwabConfig, symbol: str, days: int = 60):
     """
@@ -217,10 +299,32 @@ async def analyze_with_schwab(request: SchwabConfig, symbol: str, days: int = 60
     try:
         bot = EnhancedTradingBot(request.account_number, request.token, request.account_size)
         analysis = bot.analyze_symbol(symbol, days)
+        
+        # If analysis has an error, return it with proper HTTP error code
+        if 'error' in analysis:
+            raise HTTPException(
+                status_code=400,
+                detail=analysis
+            )
+        
         return analysis
+    except HTTPException:
+        raise
     except Exception as e:
         logger.error(f"Error in Schwab analysis: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": str(e),
+                "symbol": symbol,
+                "troubleshooting": [
+                    "Run GET /schwab/test first to diagnose connection",
+                    "Verify symbol is valid",
+                    "Check if market data is available for this symbol",
+                    "Try with fewer days of history"
+                ]
+            }
+        )
 
 @app.post("/schwab/execute")
 async def execute_on_schwab(request: SchwabConfig, order_data: ExecuteSignal):

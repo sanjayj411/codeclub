@@ -39,7 +39,10 @@ class EnhancedTradingBot:
             
             if not history:
                 logger.warning(f"No price history for {symbol}")
-                return {'error': f'No data for {symbol}'}
+                return {
+                    'error': f'No data for {symbol}',
+                    'details': 'Failed to fetch price history from Schwab API. Check: 1) Token validity 2) Symbol spelling 3) API connectivity 4) Broker service status'
+                }
             
             # Extract prices
             prices = [candle['close'] for candle in history]
