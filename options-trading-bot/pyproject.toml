@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "options-trading-bot"
+version = "1.0.0"
+description = "Options Trading Bot with RSI and Bollinger Bands"
+authors = [{name = "Sanjay Jadhav"}]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
