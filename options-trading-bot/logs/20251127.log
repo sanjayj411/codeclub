@@ -1,0 +1,6 @@
+2025-11-27 12:56:37,490 [WARNING] options_bot - No valid token found at ./tokens/schwabToken.json
+2025-11-27 12:56:37,490 [WARNING] options_bot - Please obtain a new OAuth token from https://developer.schwab.com
+2025-11-27 12:56:37,704 [ERROR] options_bot - Error fetching account info: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/6578-7226
+2025-11-27 13:04:33,079 [WARNING] options_bot - No valid token found at ./tokens/schwabToken.json
+2025-11-27 13:04:33,080 [WARNING] options_bot - Please obtain a new OAuth token from https://developer.schwab.com
+2025-11-27 13:04:33,242 [ERROR] options_bot - Error fetching account info: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/6578-7226
