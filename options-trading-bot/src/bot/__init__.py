@@ -7,17 +7,34 @@ from src.core.logger import logger
 class EnhancedTradingBot:
     """Enhanced trading bot with Schwab integration and quantitative analysis"""
     
-    def __init__(self, account_number: str, schwab_token: str, account_size: float = 10000):
+    def __init__(
+        self,
+        account_number: str,
+        app_key: str = None,
+        app_secret: str = None,
+        token_path: str = None,
+        token: str = None,
+        account_size: float = 10000
+    ):
         """
         Initialize enhanced trading bot
         
         Args:
             account_number: Schwab account number
-            schwab_token: Schwab OAuth token
+            app_key: Schwab API App Key
+            app_secret: Schwab API App Secret
+            token_path: Path to store OAuth tokens
+            token: Direct OAuth token (legacy)
             account_size: Account size for risk management
         """
         self.strategy = OptionsStrategy(account_size, max_risk_percent=0.10)
-        self.broker = SchwabBrokerAPI(account_number, schwab_token)
+        self.broker = SchwabBrokerAPI(
+            account_number,
+            app_key=app_key,
+            app_secret=app_secret,
+            token_path=token_path,
+            token=token
+        )
         self.quant = QuantitativeAnalysis()
         self.account_size = account_size
         self.positions = []

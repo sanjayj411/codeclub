@@ -1,29 +1,179 @@
 import os
+import json
 from typing import Dict, List, Optional
 from datetime import datetime, timedelta
 import requests
+from pathlib import Path
 from src.core.logger import logger
 
 class SchwabBrokerAPI:
     """Integration with Charles Schwab broker API for real trading"""
     
-    def __init__(self, account_number: str, token: Optional[str] = None):
+    def __init__(
+        self,
+        account_number: str,
+        app_key: Optional[str] = None,
+        app_secret: Optional[str] = None,
+        token_path: Optional[str] = None,
+        token: Optional[str] = None
+    ):
         """
-        Initialize Schwab API connection
+        Initialize Schwab API connection using OAuth 2.0
         
         Args:
             account_number: Your Schwab account number
-            token: OAuth token (or set SCHWAB_TOKEN env var)
+            app_key: Schwab API App Key (or set SCHWAB_APP_KEY env var)
+            app_secret: Schwab API App Secret (or set SCHWAB_SECRET env var)
+            token_path: Path to store/load OAuth tokens (or set SCHWAB_TOKEN env var)
+            token: Direct OAuth token (legacy, overrides token_path)
         """
         self.account_number = account_number
-        self.token = token or os.getenv("SCHWAB_TOKEN")
+        self.app_key = app_key or os.getenv("SCHWAB_APP_KEY")
+        self.app_secret = app_secret or os.getenv("SCHWAB_SECRET")
+        self.token_path = token_path or os.getenv("SCHWAB_TOKEN", "./tokens/schwabToken.json")
         self.base_url = "https://api.schwabapi.com/trader/v1"
-        self.headers = {
+        self.oauth_url = "https://api.schwabapi.com/v1/oauth/token"
+        
+        # Direct token takes precedence
+        if token:
+            self.token = token
+        else:
+            # Try to load from token file
+            self.token = self._load_or_refresh_token()
+        
+        self.session = requests.Session()
+        self._update_headers()
+    
+    def _update_headers(self):
+        """Update session headers with current token"""
+        self.session.headers.update({
             "Authorization": f"Bearer {self.token}",
             "Content-Type": "application/json"
-        }
-        self.session = requests.Session()
-        self.session.headers.update(self.headers)
+        })
+    
+    def _load_or_refresh_token(self) -> str:
+        """
+        Load token from file or refresh if expired
+        
+        Returns:
+            Valid OAuth token
+        """
+        token_file = Path(self.token_path)
+        
+        # Try to load existing token
+        if token_file.exists():
+            try:
+                with open(token_file, 'r') as f:
+                    token_data = json.load(f)
+                
+                # Check if token is expired
+                expires_at = token_data.get('expires_at')
+                if expires_at and datetime.fromisoformat(expires_at) > datetime.now():
+                    logger.info("Loaded valid token from file")
+                    return token_data.get('access_token')
+                
+                # Token expired, try to refresh
+                refresh_token = token_data.get('refresh_token')
+                if refresh_token:
+                    logger.info("Token expired, refreshing...")
+                    return self._refresh_token(refresh_token)
+            except Exception as e:
+                logger.error(f"Error loading token file: {str(e)}")
+        
+        # No valid token found, need to request new one
+        logger.warning(f"No valid token found at {self.token_path}")
+        logger.warning("Please obtain a new OAuth token from https://developer.schwab.com")
+        return ""
+    
+    def _refresh_token(self, refresh_token: str) -> str:
+        """
+        Refresh OAuth token using refresh token
+        
+        Args:
+            refresh_token: Refresh token from previous authorization
+            
+        Returns:
+            New access token
+        """
+        try:
+            payload = {
+                "grant_type": "refresh_token",
+                "refresh_token": refresh_token,
+                "client_id": self.app_key,
+                "client_secret": self.app_secret
+            }
+            
+            response = requests.post(self.oauth_url, data=payload)
+            response.raise_for_status()
+            
+            token_data = response.json()
+            token_data['expires_at'] = (
+                datetime.now() + timedelta(seconds=token_data.get('expires_in', 1800))
+            ).isoformat()
+            
+            # Save new token
+            self._save_token(token_data)
+            logger.info("Token refreshed successfully")
+            
+            return token_data.get('access_token')
+        except Exception as e:
+            logger.error(f"Error refreshing token: {str(e)}")
+            return ""
+    
+    def _save_token(self, token_data: Dict):
+        """
+        Save token data to file
+        
+        Args:
+            token_data: Token data dictionary with access_token, refresh_token, etc.
+        """
+        try:
+            token_file = Path(self.token_path)
+            token_file.parent.mkdir(parents=True, exist_ok=True)
+            
+            with open(token_file, 'w') as f:
+                json.dump(token_data, f, indent=2)
+            
+            logger.info(f"Token saved to {self.token_path}")
+        except Exception as e:
+            logger.error(f"Error saving token: {str(e)}")
+    
+    def authorize_and_save_token(self, authorization_code: str) -> bool:
+        """
+        Exchange authorization code for access token (OAuth 2.0 flow)
+        
+        Args:
+            authorization_code: Authorization code from OAuth callback
+            
+        Returns:
+            True if successful, False otherwise
+        """
+        try:
+            payload = {
+                "grant_type": "authorization_code",
+                "code": authorization_code,
+                "client_id": self.app_key,
+                "client_secret": self.app_secret,
+                "redirect_uri": "http://localhost:8000/callback"
+            }
+            
+            response = requests.post(self.oauth_url, data=payload)
+            response.raise_for_status()
+            
+            token_data = response.json()
+            token_data['expires_at'] = (
+                datetime.now() + timedelta(seconds=token_data.get('expires_in', 1800))
+            ).isoformat()
+            
+            self._save_token(token_data)
+            self.token = token_data.get('access_token')
+            self._update_headers()
+            
+            logger.info("Token obtained and saved successfully")
+            return True
+        except Exception as e:
+            logger.error(f"Error obtaining token: {str(e)}")
+            return False
     
     def get_account_info(self) -> Dict:
         """Get account information and balances"""

@@ -35,7 +35,10 @@ class TradeValidation(BaseModel):
 
 class SchwabConfig(BaseModel):
     account_number: str
-    token: str
+    app_key: Optional[str] = None
+    app_secret: Optional[str] = None
+    token_path: Optional[str] = None
+    token: Optional[str] = None  # Legacy support
     account_size: float = 10000
 
 class SymbolAnalysis(BaseModel):
@@ -205,19 +208,34 @@ async def run_monte_carlo(
 # Schwab Broker Integration Endpoints
 
 @app.get("/schwab/test")
-async def test_schwab_connection(account_number: str, token: str):
+async def test_schwab_connection(
+    account_number: str,
+    app_key: Optional[str] = None,
+    app_secret: Optional[str] = None,
+    token_path: Optional[str] = None,
+    token: Optional[str] = None
+):
     """
     Test Schwab API connection without errors
     
     Args:
         account_number: Schwab account number
-        token: Schwab OAuth token
+        app_key: Schwab API App Key (or env var SCHWAB_APP_KEY)
+        app_secret: Schwab API App Secret (or env var SCHWAB_SECRET)
+        token_path: Path to token file (or env var SCHWAB_TOKEN)
+        token: Direct OAuth token (legacy)
         
     Returns:
         Connection status and account info
     """
     try:
-        broker = SchwabBrokerAPI(account_number, token)
+        broker = SchwabBrokerAPI(
+            account_number,
+            app_key=app_key,
+            app_secret=app_secret,
+            token_path=token_path,
+            token=token
+        )
         
         # Test 1: Get account info
         account = broker.get_account_info()
@@ -227,8 +245,9 @@ async def test_schwab_connection(account_number: str, token: str):
                 "test": "account_info",
                 "error": "Could not retrieve account info",
                 "troubleshooting": [
-                    "Check if token is valid and not expired",
+                    "Check if app_key and app_secret are valid",
                     "Verify account number is correct",
+                    "Check if token is expired (use /schwab/authorize if needed)",
                     "Check API endpoint URL is accessible"
                 ]
             }
@@ -297,7 +316,14 @@ async def analyze_with_schwab(request: SchwabConfig, symbol: str, days: int = 60
         days: Days of historical data
     """
     try:
-        bot = EnhancedTradingBot(request.account_number, request.token, request.account_size)
+        bot = EnhancedTradingBot(
+            request.account_number,
+            app_key=request.app_key,
+            app_secret=request.app_secret,
+            token_path=request.token_path,
+            token=request.token,
+            account_size=request.account_size
+        )
         analysis = bot.analyze_symbol(symbol, days)
         
         # If analysis has an error, return it with proper HTTP error code
@@ -336,7 +362,14 @@ async def execute_on_schwab(request: SchwabConfig, order_data: ExecuteSignal):
         order_data: Trade execution details
     """
     try:
-        bot = EnhancedTradingBot(request.account_number, request.token, request.account_size)
+        bot = EnhancedTradingBot(
+            request.account_number,
+            app_key=request.app_key,
+            app_secret=request.app_secret,
+            token_path=request.token_path,
+            token=request.token,
+            account_size=request.account_size
+        )
         result = bot.execute_signal(order_data.symbol, {
             'signal': order_data.signal,
             'entry': order_data.entry,
@@ -355,11 +388,73 @@ async def execute_on_schwab(request: SchwabConfig, order_data: ExecuteSignal):
 async def monitor_schwab_positions(request: SchwabConfig):
     """Monitor all open positions on Schwab"""
     try:
-        bot = EnhancedTradingBot(request.account_number, request.token, request.account_size)
+        bot = EnhancedTradingBot(
+            request.account_number,
+            app_key=request.app_key,
+            app_secret=request.app_secret,
+            token_path=request.token_path,
+            token=request.token,
+            account_size=request.account_size
+        )
         positions = bot.monitor_positions()
         return {"positions": positions}
     except Exception as e:
         logger.error(f"Error monitoring positions: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/schwab/authorize")
+async def authorize_schwab(
+    account_number: str,
+    authorization_code: str,
+    app_key: Optional[str] = None,
+    app_secret: Optional[str] = None,
+    token_path: Optional[str] = None
+):
+    """
+    Exchange Schwab authorization code for OAuth token
+    
+    Args:
+        account_number: Schwab account number
+        authorization_code: Authorization code from OAuth callback
+        app_key: Schwab API App Key (or env var SCHWAB_APP_KEY)
+        app_secret: Schwab API App Secret (or env var SCHWAB_SECRET)
+        token_path: Path to store token (or env var SCHWAB_TOKEN)
+        
+    Returns:
+        Authorization status
+    """
+    try:
+        broker = SchwabBrokerAPI(
+            account_number,
+            app_key=app_key,
+            app_secret=app_secret,
+            token_path=token_path
+        )
+        
+        success = broker.authorize_and_save_token(authorization_code)
+        
+        if success:
+            return {
+                "status": "SUCCESS",
+                "message": "Token obtained and saved successfully",
+                "token_path": broker.token_path,
+                "account_number": account_number
+            }
+        else:
+            raise HTTPException(
+                status_code=400,
+                detail={
+                    "status": "FAILED",
+                    "error": "Failed to obtain token",
+                    "troubleshooting": [
+                        "Verify authorization_code is valid",
+                        "Check if app_key and app_secret are correct",
+                        "Ensure redirect_uri matches in Schwab developer settings"
+                    ]
+                }
+            )
+    except Exception as e:
+        logger.error(f"Error authorizing Schwab: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/features")

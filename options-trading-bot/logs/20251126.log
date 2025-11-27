@@ -3,3 +3,5 @@
 2025-11-26 12:50:05,675 [ERROR] options_bot - Error generating signal: 400: Need at least 2 prices
 2025-11-26 12:51:22,912 [ERROR] options_bot - Error fetching price history for MSFT: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/marketdata/MSFT/pricehistory?periodType=day&frequencyType=daily&frequency=1&startDate=1758991882710&endDate=1764179482710
 2025-11-26 12:51:22,913 [WARNING] options_bot - No price history for MSFT
+2025-11-26 12:53:32,690 [ERROR] options_bot - Error testing Schwab connection: name 'SchwabBrokerAPI' is not defined
+2025-11-27 12:37:36,541 [ERROR] options_bot - Error testing Schwab connection: name 'SchwabBrokerAPI' is not defined
