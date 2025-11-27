@@ -195,13 +195,11 @@ def main():
         if token and chat_id:
             try:
                 config = NotificationConfig(
+                    enabled=True,
                     token=token,
                     chat_ids=[chat_id],
-                    settings={
-                        'include_indicators': True,
-                        'include_confidence': True,
-                        'use_emojis': True
-                    }
+                    include_indicators=True,
+                    include_charts=False
                 )
                 notifier = TelegramNotifier(config)
                 logger.info("✓ Telegram notifier initialized from environment")
@@ -213,13 +211,11 @@ def main():
     elif args.token and args.chat_id:
         try:
             config = NotificationConfig(
+                enabled=True,
                 token=args.token,
                 chat_ids=[args.chat_id],
-                settings={
-                    'include_indicators': True,
-                    'include_confidence': True,
-                    'use_emojis': True
-                }
+                include_indicators=True,
+                include_charts=False
             )
             notifier = TelegramNotifier(config)
             logger.info("✓ Telegram notifier initialized from arguments")

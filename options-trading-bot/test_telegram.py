@@ -40,13 +40,11 @@ def test_telegram_notifications():
     try:
         # Create notifier config
         config = NotificationConfig(
+            enabled=True,
             token=token,
             chat_ids=[chat_id],
-            settings={
-                'include_indicators': True,
-                'include_confidence': True,
-                'use_emojis': True
-            }
+            include_indicators=True,
+            include_charts=False
         )
         
         # Create notifier
