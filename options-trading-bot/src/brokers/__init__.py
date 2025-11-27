@@ -59,7 +59,7 @@ class SchwabBrokerAPI:
         """Update session headers with current token"""
         self.session.headers.update({
             "Authorization": f"Bearer {self.access_token}",
-            "Content-Type": "application/json"
+            "Accept": "application/json"
         })
     
     def _load_tokens(self) -> None:
@@ -257,22 +257,66 @@ class SchwabBrokerAPI:
             logger.error(f"Error during authorization: {str(e)}")
             return False
     
+    
+    def get_account_hash(self) -> Optional[str]:
+        """
+        Get encrypted account hash for the specified account number
+        Required because Schwab encrypts account numbers in API calls
+        
+        Returns:
+            Encrypted account hash or None if not found
+        """
+        try:
+            url = f"{self.base_url}/accounts/accountNumbers"
+            response = self.session.get(url)
+            response.raise_for_status()
+            
+            accounts = response.json()
+            logger.info(f"Retrieved {len(accounts)} linked accounts")
+            
+            # Find the account matching our account number
+            for account in accounts:
+                if account.get('accountNumber') == self.account_number:
+                    account_hash = account.get('hashValue')
+                    logger.info(f"Found account hash for {self.account_number}")
+                    return account_hash
+            
+            logger.error(f"Account {self.account_number} not found in linked accounts")
+            return None
+            
+        except Exception as e:
+            logger.error(f"Error getting account hash: {str(e)}")
+            return None
+    
     def get_account_info(self) -> Dict:
         """Get account information and balances"""
         try:
-            url = f"{self.base_url}/accounts/{self.account_number}"
+            # First get the account hash
+            account_hash = self.get_account_hash()
+            if not account_hash:
+                logger.error("Cannot get account info without account hash")
+                return {}
+            
+            # Use account hash for the API call
+            url = f"{self.base_url}/accounts/{account_hash}"
             response = self.session.get(url)
             response.raise_for_status()
             
             data = response.json()
+            sec_account = data.get('securitiesAccount', {})
+            balances = sec_account.get('initialBalances', {})
+            
             logger.info(f"Account info retrieved for {self.account_number}")
             
             return {
                 'account_number': self.account_number,
-                'buying_power': data.get('securitiesAccount', {}).get('buyingPower'),
-                'cash_balance': data.get('securitiesAccount', {}).get('cashBalance'),
-                'margin_available': data.get('securitiesAccount', {}).get('marginBalance'),
-                'positions': data.get('securitiesAccount', {}).get('positions', [])
+                'buying_power': balances.get('buyingPower'),
+                'day_trading_buying_power': balances.get('dayTradingBuyingPower'),
+                'cash_balance': balances.get('cashBalance'),
+                'equity': balances.get('equity'),
+                'margin_available': balances.get('margin'),
+                'maintenance_requirement': balances.get('maintenanceRequirement'),
+                'positions': sec_account.get('positions', [])
             }
         except Exception as e:
             logger.error(f"Error fetching account info: {str(e)}")
@@ -281,11 +325,17 @@ class SchwabBrokerAPI:
     def get_quote(self, symbol: str) -> Dict:
         """Get real-time quote for a symbol"""
         try:
-            url = f"{self.base_url}/marketdata/{symbol}/quotes"
-            response = self.session.get(url)
+            # Quotes use /marketdata/v1/quotes with symbols parameter
+            url = "https://api.schwabapi.com/marketdata/v1/quotes"
+            params = {'symbols': symbol}
+            
+            response = self.session.get(url, params=params)
             response.raise_for_status()
             
-            quote = response.json()
+            data = response.json()
+            quote_data = data.get(symbol, {})
+            quote = quote_data.get('quote', {})
+            
             logger.info(f"Quote received for {symbol}: ${quote.get('lastPrice')}")
             
             return {
@@ -315,15 +365,29 @@ class SchwabBrokerAPI:
             end_date = datetime.now()
             start_date = end_date - timedelta(days=days)
             
+            # Determine period type based on days requested
+            if days <= 5:
+                period_type = 'day'
+                frequency_type = 'minute'
+            elif days <= 30:
+                period_type = 'month'
+                frequency_type = 'daily'
+            else:
+                period_type = 'year'
+                frequency_type = 'daily'
+            
             params = {
-                'periodType': 'day',
-                'frequencyType': 'daily',
+                'symbol': symbol,
+                'periodType': period_type,
+                'frequencyType': frequency_type,
                 'frequency': 1,
                 'startDate': int(start_date.timestamp() * 1000),
                 'endDate': int(end_date.timestamp() * 1000)
             }
             
-            url = f"{self.base_url}/marketdata/{symbol}/pricehistory"
+            # Price history uses /marketdata/v1/ endpoint
+            url = "https://api.schwabapi.com/marketdata/v1/pricehistory"
+            
             response = self.session.get(url, params=params)
             response.raise_for_status()
             

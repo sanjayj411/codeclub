@@ -4,3 +4,63 @@
 2025-11-27 13:04:33,079 [WARNING] options_bot - No valid token found at ./tokens/schwabToken.json
 2025-11-27 13:04:33,080 [WARNING] options_bot - Please obtain a new OAuth token from https://developer.schwab.com
 2025-11-27 13:04:33,242 [ERROR] options_bot - Error fetching account info: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/6578-7226
+2025-11-27 13:22:49,524 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:22:49,757 [ERROR] options_bot - Error fetching account info: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/6578-7226
+2025-11-27 13:23:35,030 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:23:35,273 [ERROR] options_bot - Error getting account hash: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/accountNumbers
+2025-11-27 13:23:35,274 [ERROR] options_bot - Cannot get account info without account hash
+2025-11-27 13:23:54,288 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:23:54,436 [ERROR] options_bot - Error getting account hash: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/accountNumbers
+2025-11-27 13:23:54,436 [ERROR] options_bot - Cannot get account info without account hash
+2025-11-27 13:25:44,385 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:25:44,538 [ERROR] options_bot - Error getting account hash: 400 Client Error: Bad Request for url: https://api.schwabapi.com/trader/v1/accounts/accountNumbers
+2025-11-27 13:25:50,567 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:26:25,228 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:26:25,513 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:26:25,513 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:26:30,482 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:26:30,819 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:26:30,819 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:26:31,059 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:26:31,059 [ERROR] options_bot - Test failed: unsupported format string passed to NoneType.__format__
+Traceback (most recent call last):
+  File "/Users/sanjayj/codeclub/options-trading-bot/test_schwab_api.py", line 75, in main
+    print(f"  Buying Power: ${account_info.get('buying_power', 0):,.2f}")
+TypeError: unsupported format string passed to NoneType.__format__
+2025-11-27 13:26:36,908 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:26:37,205 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:26:37,205 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:26:37,467 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:26:43,933 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:26:44,368 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:26:44,368 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:27:01,981 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:27:02,231 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:27:02,232 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:27:02,463 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:27:02,590 [ERROR] options_bot - Error fetching quote for AAPL: 404 Client Error: Not Found for url: https://api.schwabapi.com/trader/v1/marketdata/AAPL/quotes
+2025-11-27 13:27:02,771 [ERROR] options_bot - Error fetching price history for AAPL: 404 Client Error: Not Found for url: https://api.schwabapi.com/trader/v1/marketdata/AAPL/pricehistory?periodType=day&frequencyType=daily&frequency=1&startDate=1763836022590&endDate=1764268022590
+2025-11-27 13:27:19,754 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:27:20,022 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:27:20,023 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:27:20,287 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:27:20,389 [ERROR] options_bot - Error fetching quote for AAPL: 404 Client Error: Not Found for url: https://api.schwabapi.com/marketdata/v1/quotes/AAPL
+2025-11-27 13:27:20,573 [ERROR] options_bot - Error fetching price history for AAPL: 400 Client Error: Bad Request for url: https://api.schwabapi.com/marketdata/v1/pricehistory?periodType=day&frequencyType=daily&frequency=1&startDate=1763836040389&endDate=1764268040389&symbol=AAPL
+2025-11-27 13:28:15,405 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:28:15,812 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:28:15,812 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:28:16,030 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:28:16,324 [INFO] options_bot - Quote received for AAPL: $277.9
+2025-11-27 13:28:16,859 [INFO] options_bot - Retrieved 3384 candles for AAPL
+2025-11-27 13:28:25,277 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:28:25,552 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:28:25,552 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:28:25,847 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:28:26,044 [INFO] options_bot - Quote received for AAPL: $277.9
+2025-11-27 13:28:26,373 [INFO] options_bot - Retrieved 3384 candles for AAPL
+2025-11-27 13:28:36,690 [INFO] options_bot - Tokens loaded from file
+2025-11-27 13:28:37,113 [INFO] options_bot - Retrieved 2 linked accounts
+2025-11-27 13:28:37,113 [INFO] options_bot - Found account hash for 65787226
+2025-11-27 13:28:37,367 [INFO] options_bot - Account info retrieved for 65787226
+2025-11-27 13:28:37,547 [INFO] options_bot - Quote received for AAPL: $277.9
+2025-11-27 13:28:37,830 [INFO] options_bot - Retrieved 22 candles for AAPL

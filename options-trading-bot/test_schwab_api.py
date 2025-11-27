@@ -69,12 +69,23 @@ def main():
         
         account_info = broker.get_account_info()
         
-        if account_info:
+        if account_info and account_info.get('account_number'):
             print(f"\n✓ Account Info Retrieved!")
             print(f"  Account: {account_info.get('account_number')}")
-            print(f"  Buying Power: ${account_info.get('buying_power', 0):,.2f}")
-            print(f"  Cash Balance: ${account_info.get('cash_balance', 0):,.2f}")
-            print(f"  Margin: ${account_info.get('margin_available', 0):,.2f}")
+            
+            buying_power = account_info.get('buying_power')
+            cash_balance = account_info.get('cash_balance')
+            margin = account_info.get('margin_available')
+            equity = account_info.get('equity')
+            
+            if buying_power is not None:
+                print(f"  Buying Power: ${buying_power:,.2f}")
+            if cash_balance is not None:
+                print(f"  Cash Balance: ${cash_balance:,.2f}")
+            if margin is not None:
+                print(f"  Margin: ${margin:,.2f}")
+            if equity is not None:
+                print(f"  Equity: ${equity:,.2f}")
             print(f"  Positions: {len(account_info.get('positions', []))}")
         else:
             print("\n✗ Failed to retrieve account info")
@@ -126,7 +137,7 @@ def main():
         print("TEST 4: Price History (AAPL, 5 days)")
         print("=" * 80)
         
-        history = broker.get_price_history("AAPL", days=5)
+        history = broker.get_price_history("AAPL", days=30)
         
         if history:
             print(f"\n✓ Price History Retrieved ({len(history)} candles)\n")

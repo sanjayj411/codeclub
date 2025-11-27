@@ -61,20 +61,32 @@ def main():
         print("Error: No URL provided")
         return False
     
-    # Extract code from URL
+    # Extract code from URL (Schwab format: code=...%40...)
     try:
         if "code=" in auth_code:
-            code = auth_code[auth_code.index("code=") + 5:]
-            # Stop at next parameter
-            if "&" in code:
-                code = code[:code.index("&")]
-        else:
-            code = auth_code
-        
-        if not code:
-            raise ValueError("Could not find code in URL")
+            # Get everything after "code="
+            code_start = auth_code.index("code=") + 5
+            code_section = auth_code[code_start:]
             
-        print(f"\nCode extracted: {code[:20]}...{code[-10:]}")
+            # Schwab uses %40 (URL-encoded @) as delimiter - code ends before %40
+            if "%40" in code_section:
+                code = code_section[:code_section.index("%40")]
+                # Append @ to match Schwabdev format
+                code = code + "@"
+            # Or find & for next parameter
+            elif "&" in code_section:
+                code = code_section[:code_section.index("&")]
+                code = code + "@"
+            else:
+                code = code_section.rstrip("@&?") + "@"
+        else:
+            # If just pasting the code, ensure it ends with @
+            code = auth_code.rstrip("@&?") + "@"
+        
+        if not code or len(code) < 21:  # Must be at least 20 chars + @
+            raise ValueError("Code too short or invalid")
+            
+        print(f"\nCode extracted: {code[:20]}...{code[-5:]}")
     except Exception as e:
         print(f"Error extracting code: {str(e)}")
         return False
