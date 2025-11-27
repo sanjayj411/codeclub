@@ -64,3 +64,406 @@ TypeError: unsupported format string passed to NoneType.__format__
 2025-11-27 13:28:37,367 [INFO] options_bot - Account info retrieved for 65787226
 2025-11-27 13:28:37,547 [INFO] options_bot - Quote received for AAPL: $277.9
 2025-11-27 13:28:37,830 [INFO] options_bot - Retrieved 22 candles for AAPL
+2025-11-27 15:35:30,080 [INFO] options_bot - Running backtest with sample data...
+2025-11-27 15:35:30,081 [INFO] options_bot - Starting backtest with $10000.00 capital
+2025-11-27 15:35:30,115 [INFO] options_bot - Backtest completed: 11 trades, $-232.32 P&L, 36.4% win rate
+2025-11-27 15:36:45,299 [INFO] options_bot - Tokens loaded from file
+2025-11-27 15:36:45,300 [ERROR] options_bot - Backtest error: 'SchwabBrokerAPI' object has no attribute 'load_oauth_tokens'
+2025-11-27 15:36:59,506 [INFO] options_bot - Tokens loaded from file
+2025-11-27 15:36:59,716 [ERROR] options_bot - Error getting account hash: 401 Client Error: Unauthorized for url: https://api.schwabapi.com/trader/v1/accounts/accountNumbers
+2025-11-27 15:36:59,716 [ERROR] options_bot - Unable to get account hash
+2025-11-27 15:37:49,161 [INFO] options_bot - Starting paper trading simulation...
+2025-11-27 15:37:49,162 [INFO] options_bot - Simulating 300 time periods...
+2025-11-27 15:37:49,165 [INFO] options_bot - PAPER: BUY 19.4225 AAPL @ $102.97 (cost: $2003.00)
+2025-11-27 15:37:49,165 [INFO] options_bot - Position opened: AAPL - 19.4225 @ $102.97
+2025-11-27 15:37:49,165 [INFO] options_bot - PAPER: BUY 14.7216 QQQ @ $108.64 (cost: $1601.80)
+2025-11-27 15:37:49,165 [INFO] options_bot - Position opened: QQQ - 14.7216 @ $108.64
+2025-11-27 15:37:49,166 [INFO] options_bot - PAPER: SELL 14.7216 QQQ @ $110.63 P&L: $26.77 (1.67%)
+2025-11-27 15:37:49,166 [INFO] options_bot - Position closed: QQQ - $26.77 (1.67%) WIN ✓
+2025-11-27 15:37:49,172 [INFO] options_bot - PAPER: BUY 14.2596 QQQ @ $112.50 (cost: $1606.68)
+2025-11-27 15:37:49,172 [INFO] options_bot - Position opened: QQQ - 14.2596 @ $112.50
+2025-11-27 15:37:49,172 [INFO] options_bot - PAPER: SELL 19.4225 AAPL @ $106.71 P&L: $69.40 (3.47%)
+2025-11-27 15:37:49,172 [INFO] options_bot - Position closed: AAPL - $69.40 (3.47%) WIN ✓
+2025-11-27 15:37:49,172 [INFO] options_bot - PAPER: SELL 14.2596 QQQ @ $112.50 P&L: $-2.41 (-0.15%)
+2025-11-27 15:37:49,172 [INFO] options_bot - Position closed: QQQ - $-2.41 (-0.15%) LOSS ✗
+2025-11-27 15:37:49,172 [INFO] options_bot - PAPER: BUY 19.1558 AAPL @ $105.30 (cost: $2020.22)
+2025-11-27 15:37:49,172 [INFO] options_bot - Position opened: AAPL - 19.1558 @ $105.30
+2025-11-27 15:37:49,172 [INFO] options_bot - PAPER: BUY 18.1750 SPY @ $88.76 (cost: $1615.57)
+2025-11-27 15:37:49,172 [INFO] options_bot - Position opened: SPY - 18.1750 @ $88.76
+2025-11-27 15:37:49,173 [INFO] options_bot - PAPER: BUY 11.5883 QQQ @ $111.32 (cost: $1291.97)
+2025-11-27 15:37:49,173 [INFO] options_bot - Position opened: QQQ - 11.5883 @ $111.32
+2025-11-27 15:37:49,173 [INFO] options_bot - PAPER: SELL 18.1750 SPY @ $89.63 P&L: $13.45 (0.83%)
+2025-11-27 15:37:49,173 [INFO] options_bot - Position closed: SPY - $13.45 (0.83%) WIN ✓
+2025-11-27 15:37:49,173 [INFO] options_bot - PAPER: SELL 11.5883 QQQ @ $110.53 P&L: $-11.09 (-0.86%)
+2025-11-27 15:37:49,173 [INFO] options_bot - Position closed: QQQ - $-11.09 (-0.86%) LOSS ✗
+2025-11-27 15:37:49,173 [INFO] options_bot - PAPER: SELL 19.1558 AAPL @ $105.50 P&L: $0.71 (0.03%)
+2025-11-27 15:37:49,173 [INFO] options_bot - Position closed: AAPL - $0.71 (0.03%) WIN ✓
+2025-11-27 15:37:49,173 [INFO] options_bot - PAPER: BUY 22.8473 SPY @ $88.25 (cost: $2019.35)
+2025-11-27 15:37:49,173 [INFO] options_bot - Position opened: SPY - 22.8473 @ $88.25
+2025-11-27 15:37:49,173 [INFO] options_bot - PAPER: BUY 14.5882 QQQ @ $110.53 (cost: $1614.88)
+2025-11-27 15:37:49,173 [INFO] options_bot - Position opened: QQQ - 14.5882 @ $110.53
+2025-11-27 15:37:49,174 [INFO] options_bot - PAPER: BUY 12.2226 AAPL @ $105.50 (cost: $1291.42)
+2025-11-27 15:37:49,174 [INFO] options_bot - Position opened: AAPL - 12.2226 @ $105.50
+2025-11-27 15:37:49,174 [INFO] options_bot - PAPER: SELL 12.2226 AAPL @ $105.81 P&L: $1.86 (0.14%)
+2025-11-27 15:37:49,174 [INFO] options_bot - Position closed: AAPL - $1.86 (0.14%) WIN ✓
+2025-11-27 15:37:49,174 [INFO] options_bot - PAPER: SELL 22.8473 SPY @ $89.39 P&L: $22.94 (1.14%)
+2025-11-27 15:37:49,174 [INFO] options_bot - Position closed: SPY - $22.94 (1.14%) WIN ✓
+2025-11-27 15:37:49,174 [INFO] options_bot - PAPER: BUY 16.0680 AAPL @ $105.63 (cost: $1699.87)
+2025-11-27 15:37:49,174 [INFO] options_bot - Position opened: AAPL - 16.0680 @ $105.63
+2025-11-27 15:37:49,175 [INFO] options_bot - PAPER: SELL 16.0680 AAPL @ $107.23 P&L: $23.07 (1.36%)
+2025-11-27 15:37:49,175 [INFO] options_bot - Position closed: AAPL - $23.07 (1.36%) WIN ✓
+2025-11-27 15:37:49,175 [INFO] options_bot - PAPER: BUY 16.1574 AAPL @ $105.30 (cost: $1703.98)
+2025-11-27 15:37:49,175 [INFO] options_bot - Position opened: AAPL - 16.1574 @ $105.30
+2025-11-27 15:37:49,184 [INFO] options_bot - PAPER: SELL 16.1574 AAPL @ $108.05 P&L: $41.74 (2.45%)
+2025-11-27 15:37:49,184 [INFO] options_bot - Position closed: AAPL - $41.74 (2.45%) WIN ✓
+2025-11-27 15:37:49,187 [INFO] options_bot - PAPER: BUY 15.5510 AAPL @ $109.91 (cost: $1711.83)
+2025-11-27 15:37:49,187 [INFO] options_bot - Position opened: AAPL - 15.5510 @ $109.91
+2025-11-27 15:37:49,188 [INFO] options_bot - PAPER: SELL 15.5510 AAPL @ $110.23 P&L: $2.31 (0.13%)
+2025-11-27 15:37:49,188 [INFO] options_bot - Position closed: AAPL - $2.31 (0.13%) WIN ✓
+2025-11-27 15:37:49,188 [INFO] options_bot - PAPER: BUY 15.3509 AAPL @ $111.34 (cost: $1711.77)
+2025-11-27 15:37:49,188 [INFO] options_bot - Position opened: AAPL - 15.3509 @ $111.34
+2025-11-27 15:37:49,189 [INFO] options_bot - PAPER: SELL 15.3509 AAPL @ $111.02 P&L: $-7.45 (-0.44%)
+2025-11-27 15:37:49,189 [INFO] options_bot - Position closed: AAPL - $-7.45 (-0.44%) LOSS ✗
+2025-11-27 15:37:49,193 [INFO] options_bot - PAPER: BUY 18.3607 SPY @ $92.98 (cost: $1709.77)
+2025-11-27 15:37:49,193 [INFO] options_bot - Position opened: SPY - 18.3607 @ $92.98
+2025-11-27 15:37:49,194 [INFO] options_bot - PAPER: SELL 18.3607 SPY @ $94.53 P&L: $25.88 (1.52%)
+2025-11-27 15:37:49,194 [INFO] options_bot - Position closed: SPY - $25.88 (1.52%) WIN ✓
+2025-11-27 15:37:49,194 [INFO] options_bot - PAPER: BUY 15.8330 AAPL @ $108.12 (cost: $1714.44)
+2025-11-27 15:37:49,194 [INFO] options_bot - Position opened: AAPL - 15.8330 @ $108.12
+2025-11-27 15:37:49,195 [INFO] options_bot - PAPER: SELL 14.5882 QQQ @ $116.61 P&L: $86.06 (5.34%)
+2025-11-27 15:37:49,195 [INFO] options_bot - Position closed: QQQ - $86.06 (5.34%) WIN ✓
+2025-11-27 15:37:49,198 [INFO] options_bot - PAPER: SELL 15.8330 AAPL @ $105.93 P&L: $-37.24 (-2.18%)
+2025-11-27 15:37:49,198 [INFO] options_bot - Position closed: AAPL - $-37.24 (-2.18%) LOSS ✗
+2025-11-27 15:37:49,198 [INFO] options_bot - Exported 15 trades to paper_trades.json
+2025-11-27 15:40:33,406 [INFO] options_bot - Starting backtest with $5000.00 capital
+2025-11-27 15:40:33,410 [INFO] options_bot - Backtest completed: 1 trades, $183.54 P&L, 100.0% win rate
+2025-11-27 15:40:33,413 [INFO] options_bot - PAPER: BUY 9.9864 TEST1 @ $100.14 (cost: $1001.50)
+2025-11-27 15:40:33,414 [INFO] options_bot - PAPER: SELL 9.9864 TEST1 @ $99.33 P&L: $-9.56 (-0.96%)
+2025-11-27 15:40:33,414 [INFO] options_bot - PAPER: BUY 10.5544 TEST2 @ $94.54 (cost: $999.28)
+2025-11-27 15:40:33,416 [INFO] options_bot - PAPER: SELL 10.5544 TEST2 @ $96.68 P&L: $21.08 (2.11%)
+2025-11-27 15:40:33,461 [INFO] options_bot - Tokens loaded from file
+2025-11-27 15:40:33,665 [ERROR] options_bot - Error fetching quote for AAPL: 401 Client Error: Unauthorized for url: https://api.schwabapi.com/marketdata/v1/quotes?symbols=AAPL
+2025-11-27 15:40:33,686 [WARNING] options_bot - python-telegram-bot not installed. Install with: pip install python-telegram-bot
+2025-11-27 15:40:33,686 [ERROR] options_bot - Telegram module not available
+2025-11-27 15:42:55,720 [INFO] options_bot - Running without Telegram notifications
+2025-11-27 15:42:55,720 [INFO] options_bot - To enable: python paper_trading_telegram.py --token YOUR_TOKEN --chat-id YOUR_CHAT_ID
+2025-11-27 15:42:55,720 [INFO] options_bot - Starting paper trading with Telegram integration...
+2025-11-27 15:42:55,721 [INFO] options_bot - Simulating 300 time periods...
+2025-11-27 15:42:55,722 [INFO] options_bot - PAPER: BUY 19.0342 AAPL @ $105.07 (cost: $2003.00)
+2025-11-27 15:42:55,722 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 19.0342
+Entry Price: $105.07
+2025-11-27 15:42:55,722 [INFO] options_bot - PAPER: BUY 16.6131 SPY @ $96.27 (cost: $1601.80)
+2025-11-27 15:42:55,722 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 16.6131
+Entry Price: $96.27
+2025-11-27 15:42:55,723 [INFO] options_bot - PAPER: SELL 16.6131 SPY @ $96.72 P&L: $5.02 (0.31%)
+2025-11-27 15:42:55,723 [INFO] options_bot - ✅ WIN: SPY
+P&L: $5.02 (0.31%)
+2025-11-27 15:42:55,723 [INFO] options_bot - PAPER: BUY 16.5462 QQQ @ $96.69 (cost: $1602.32)
+2025-11-27 15:42:55,723 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 16.5462
+Entry Price: $96.69
+2025-11-27 15:42:55,725 [INFO] options_bot - PAPER: SELL 19.0342 AAPL @ $107.95 P&L: $51.62 (2.58%)
+2025-11-27 15:42:55,725 [INFO] options_bot - ✅ WIN: AAPL
+P&L: $51.62 (2.58%)
+2025-11-27 15:42:55,731 [INFO] options_bot - PAPER: BUY 16.2624 AAPL @ $103.91 (cost: $1692.32)
+2025-11-27 15:42:55,731 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 16.2624
+Entry Price: $103.91
+2025-11-27 15:42:55,740 [INFO] options_bot - PAPER: SELL 16.2624 AAPL @ $98.51 P&L: $-90.14 (-5.33%)
+2025-11-27 15:42:55,740 [INFO] options_bot - ❌ LOSS: AAPL
+P&L: $-90.14 (-5.33%)
+2025-11-27 15:42:55,740 [INFO] options_bot - PAPER: BUY 16.9883 AAPL @ $98.38 (cost: $1673.76)
+2025-11-27 15:42:55,740 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 16.9883
+Entry Price: $98.38
+2025-11-27 15:42:55,755 [INFO] options_bot - PAPER: SELL 16.5462 QQQ @ $82.77 P&L: $-232.45 (-14.53%)
+2025-11-27 15:42:55,755 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-232.45 (-14.53%)
+2025-11-27 15:42:55,755 [INFO] options_bot - PAPER: SELL 16.9883 AAPL @ $86.56 P&L: $-202.98 (-12.15%)
+2025-11-27 15:42:55,755 [INFO] options_bot - ❌ LOSS: AAPL
+P&L: $-202.98 (-12.15%)
+2025-11-27 15:42:55,755 [INFO] options_bot - Exported 5 trades to paper_trades_telegram.json
+2025-11-27 16:02:24,748 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:02:30,903 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:02:44,833 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:02:54,822 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:02:55,365 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:02:55,660 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:04:08,230 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:04:08,692 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:04:08,963 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:06:31,067 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:06:31,540 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:06:31,809 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:06:32,101 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:06:32,367 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:08:52,620 [WARNING] options_bot - Telegram credentials not found in environment
+2025-11-27 16:08:52,620 [INFO] options_bot - Starting paper trading with Telegram integration...
+2025-11-27 16:08:52,621 [INFO] options_bot - Simulating 300 time periods...
+2025-11-27 16:08:52,623 [INFO] options_bot - PAPER: BUY 21.3981 AAPL @ $93.47 (cost: $2003.00)
+2025-11-27 16:08:52,623 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 21.3981
+Entry Price: $93.47
+2025-11-27 16:08:52,623 [INFO] options_bot - PAPER: BUY 14.9620 SPY @ $106.90 (cost: $1601.80)
+2025-11-27 16:08:52,623 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 14.9620
+Entry Price: $106.90
+2025-11-27 16:08:52,623 [INFO] options_bot - PAPER: BUY 12.2488 QQQ @ $104.42 (cost: $1280.96)
+2025-11-27 16:08:52,623 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 12.2488
+Entry Price: $104.42
+2025-11-27 16:08:52,631 [INFO] options_bot - PAPER: SELL 21.3981 AAPL @ $89.52 P&L: $-87.37 (-4.37%)
+2025-11-27 16:08:52,631 [INFO] options_bot - ❌ LOSS: AAPL
+P&L: $-87.37 (-4.37%)
+2025-11-27 16:08:52,631 [INFO] options_bot - PAPER: SELL 14.9620 SPY @ $106.65 P&L: $-6.04 (-0.38%)
+2025-11-27 16:08:52,631 [INFO] options_bot - ❌ LOSS: SPY
+P&L: $-6.04 (-0.38%)
+2025-11-27 16:08:52,631 [INFO] options_bot - PAPER: SELL 12.2488 QQQ @ $101.35 P&L: $-39.49 (-3.09%)
+2025-11-27 16:08:52,631 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-39.49 (-3.09%)
+2025-11-27 16:08:52,632 [INFO] options_bot - PAPER: BUY 18.1646 SPY @ $108.56 (cost: $1974.92)
+2025-11-27 16:08:52,632 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 18.1646
+Entry Price: $108.56
+2025-11-27 16:08:52,632 [INFO] options_bot - PAPER: BUY 15.2656 QQQ @ $103.30 (cost: $1579.34)
+2025-11-27 16:08:52,633 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.2656
+Entry Price: $103.30
+2025-11-27 16:08:52,634 [INFO] options_bot - PAPER: SELL 15.2656 QQQ @ $103.12 P&L: $-5.17 (-0.33%)
+2025-11-27 16:08:52,634 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-5.17 (-0.33%)
+2025-11-27 16:08:52,636 [INFO] options_bot - PAPER: BUY 15.2524 QQQ @ $103.29 (cost: $1577.83)
+2025-11-27 16:08:52,636 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.2524
+Entry Price: $103.29
+2025-11-27 16:08:52,642 [INFO] options_bot - PAPER: SELL 15.2524 QQQ @ $102.68 P&L: $-11.64 (-0.74%)
+2025-11-27 16:08:52,642 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-11.64 (-0.74%)
+2025-11-27 16:08:52,644 [INFO] options_bot - PAPER: BUY 15.4433 QQQ @ $101.83 (cost: $1575.03)
+2025-11-27 16:08:52,644 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.4433
+Entry Price: $101.83
+2025-11-27 16:08:52,645 [INFO] options_bot - PAPER: SELL 15.4433 QQQ @ $102.84 P&L: $13.10 (0.83%)
+2025-11-27 16:08:52,645 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $13.10 (0.83%)
+2025-11-27 16:08:52,646 [INFO] options_bot - PAPER: BUY 15.3061 QQQ @ $102.89 (cost: $1577.18)
+2025-11-27 16:08:52,646 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.3061
+Entry Price: $102.89
+2025-11-27 16:08:52,649 [INFO] options_bot - PAPER: SELL 15.3061 QQQ @ $106.41 P&L: $51.41 (3.26%)
+2025-11-27 16:08:52,649 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $51.41 (3.26%)
+2025-11-27 16:08:52,651 [INFO] options_bot - PAPER: BUY 14.8428 QQQ @ $106.76 (cost: $1587.00)
+2025-11-27 16:08:52,651 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 14.8428
+Entry Price: $106.76
+2025-11-27 16:08:52,652 [INFO] options_bot - PAPER: SELL 14.8428 QQQ @ $109.16 P&L: $33.23 (2.10%)
+2025-11-27 16:08:52,652 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $33.23 (2.10%)
+2025-11-27 16:08:52,653 [INFO] options_bot - PAPER: BUY 14.3320 QQQ @ $111.00 (cost: $1593.18)
+2025-11-27 16:08:52,653 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 14.3320
+Entry Price: $111.00
+2025-11-27 16:08:52,654 [INFO] options_bot - PAPER: SELL 14.3320 QQQ @ $113.77 P&L: $37.31 (2.35%)
+2025-11-27 16:08:52,654 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $37.31 (2.35%)
+2025-11-27 16:08:52,655 [INFO] options_bot - PAPER: BUY 14.2305 QQQ @ $112.28 (cost: $1600.18)
+2025-11-27 16:08:52,655 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 14.2305
+Entry Price: $112.28
+2025-11-27 16:08:52,658 [INFO] options_bot - PAPER: SELL 18.1646 SPY @ $106.89 P&L: $-33.21 (-1.68%)
+2025-11-27 16:08:52,658 [INFO] options_bot - ❌ LOSS: SPY
+P&L: $-33.21 (-1.68%)
+2025-11-27 16:08:52,659 [INFO] options_bot - PAPER: SELL 14.2305 QQQ @ $110.25 P&L: $-31.22 (-1.95%)
+2025-11-27 16:08:52,659 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-31.22 (-1.95%)
+2025-11-27 16:08:52,659 [INFO] options_bot - Exported 11 trades to paper_trades_telegram.json
+2025-11-27 16:09:07,299 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:09:07,299 [INFO] options_bot - ✓ Telegram notifier initialized from environment
+2025-11-27 16:09:07,299 [INFO] options_bot - Starting paper trading with Telegram integration...
+2025-11-27 16:09:07,300 [INFO] options_bot - Simulating 300 time periods...
+2025-11-27 16:09:07,303 [INFO] options_bot - PAPER: BUY 18.1913 SPY @ $109.94 (cost: $2003.00)
+2025-11-27 16:09:07,303 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 18.1913
+Entry Price: $109.94
+2025-11-27 16:09:07,303 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,303 [INFO] options_bot - PAPER: BUY 17.6341 AAPL @ $90.70 (cost: $1601.80)
+2025-11-27 16:09:07,303 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 17.6341
+Entry Price: $90.70
+2025-11-27 16:09:07,303 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,303 [INFO] options_bot - PAPER: BUY 11.4226 QQQ @ $111.97 (cost: $1280.96)
+2025-11-27 16:09:07,303 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 11.4226
+Entry Price: $111.97
+2025-11-27 16:09:07,303 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,304 [INFO] options_bot - PAPER: SELL 17.6341 AAPL @ $92.70 P&L: $32.80 (2.05%)
+2025-11-27 16:09:07,304 [INFO] options_bot - ✅ WIN: AAPL
+P&L: $32.80 (2.05%)
+2025-11-27 16:09:07,304 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,316 [INFO] options_bot - PAPER: SELL 11.4226 QQQ @ $114.40 P&L: $25.72 (2.01%)
+2025-11-27 16:09:07,316 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $25.72 (2.01%)
+2025-11-27 16:09:07,316 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,318 [INFO] options_bot - PAPER: BUY 13.6666 QQQ @ $117.82 (cost: $1612.65)
+2025-11-27 16:09:07,318 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 13.6666
+Entry Price: $117.82
+2025-11-27 16:09:07,319 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,319 [INFO] options_bot - PAPER: SELL 13.6666 QQQ @ $118.46 P&L: $6.34 (0.39%)
+2025-11-27 16:09:07,319 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $6.34 (0.39%)
+2025-11-27 16:09:07,319 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,321 [INFO] options_bot - PAPER: BUY 13.5538 QQQ @ $118.86 (cost: $1613.44)
+2025-11-27 16:09:07,321 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 13.5538
+Entry Price: $118.86
+2025-11-27 16:09:07,321 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,323 [INFO] options_bot - PAPER: SELL 13.5538 QQQ @ $122.03 P&L: $40.45 (2.51%)
+2025-11-27 16:09:07,323 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $40.45 (2.51%)
+2025-11-27 16:09:07,323 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,323 [INFO] options_bot - PAPER: BUY 13.1556 QQQ @ $123.04 (cost: $1621.06)
+2025-11-27 16:09:07,324 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 13.1556
+Entry Price: $123.04
+2025-11-27 16:09:07,324 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,327 [INFO] options_bot - PAPER: SELL 13.1556 QQQ @ $125.63 P&L: $31.66 (1.96%)
+2025-11-27 16:09:07,327 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $31.66 (1.96%)
+2025-11-27 16:09:07,327 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,328 [INFO] options_bot - PAPER: BUY 12.8745 QQQ @ $126.18 (cost: $1626.91)
+2025-11-27 16:09:07,328 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 12.8745
+Entry Price: $126.18
+2025-11-27 16:09:07,329 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,329 [INFO] options_bot - PAPER: SELL 12.8745 QQQ @ $128.16 P&L: $23.07 (1.42%)
+2025-11-27 16:09:07,329 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $23.07 (1.42%)
+2025-11-27 16:09:07,329 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,330 [INFO] options_bot - PAPER: BUY 12.8426 QQQ @ $126.81 (cost: $1631.05)
+2025-11-27 16:09:07,330 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 12.8426
+Entry Price: $126.81
+2025-11-27 16:09:07,330 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,332 [INFO] options_bot - PAPER: SELL 12.8426 QQQ @ $127.83 P&L: $10.59 (0.65%)
+2025-11-27 16:09:07,332 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $10.59 (0.65%)
+2025-11-27 16:09:07,332 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,333 [INFO] options_bot - PAPER: BUY 12.7532 QQQ @ $127.83 (cost: $1632.68)
+2025-11-27 16:09:07,333 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 12.7532
+Entry Price: $127.83
+2025-11-27 16:09:07,333 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,336 [INFO] options_bot - PAPER: SELL 18.1913 SPY @ $119.14 P&L: $164.13 (8.21%)
+2025-11-27 16:09:07,336 [INFO] options_bot - ✅ WIN: SPY
+P&L: $164.13 (8.21%)
+2025-11-27 16:09:07,336 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,336 [INFO] options_bot - PAPER: SELL 12.7532 QQQ @ $125.61 P&L: $-30.66 (-1.88%)
+2025-11-27 16:09:07,336 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-30.66 (-1.88%)
+2025-11-27 16:09:07,336 [WARNING] options_bot - Could not send Telegram notification: send_trade_signal_sync() missing 4 required positional arguments: 'action', 'price', 'confidence', and 'indicators'
+2025-11-27 16:09:07,871 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 403 Forbidden"
+2025-11-27 16:09:07,872 [ERROR] options_bot - Failed to send Telegram message to 1917762725: Forbidden: bots can't send messages to bots
+2025-11-27 16:09:07,872 [INFO] options_bot - Daily summary sent via Telegram
+2025-11-27 16:09:07,873 [INFO] options_bot - Exported 9 trades to paper_trades_telegram.json
+2025-11-27 16:10:58,635 [INFO] options_bot - Telegram notifier initialized
+2025-11-27 16:10:58,635 [INFO] options_bot - ✓ Telegram notifier initialized from environment
+2025-11-27 16:10:58,635 [INFO] options_bot - Starting paper trading with Telegram integration...
+2025-11-27 16:10:58,636 [INFO] options_bot - Simulating 300 time periods...
+2025-11-27 16:10:58,638 [INFO] options_bot - PAPER: BUY 20.7291 SPY @ $96.48 (cost: $2003.00)
+2025-11-27 16:10:58,638 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 20.7291
+Entry Price: $96.48
+2025-11-27 16:10:59,104 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:10:59,108 [INFO] options_bot - PAPER: BUY 15.2181 QQQ @ $105.10 (cost: $1601.80)
+2025-11-27 16:10:59,109 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.2181
+Entry Price: $105.10
+2025-11-27 16:10:59,368 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:10:59,369 [INFO] options_bot - PAPER: BUY 11.2822 AAPL @ $113.37 (cost: $1280.96)
+2025-11-27 16:10:59,370 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 11.2822
+Entry Price: $113.37
+2025-11-27 16:10:59,630 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:10:59,633 [INFO] options_bot - PAPER: SELL 11.2822 AAPL @ $113.37 P&L: $-1.92 (-0.15%)
+2025-11-27 16:10:59,634 [INFO] options_bot - ❌ LOSS: AAPL
+P&L: $-1.92 (-0.15%)
+2025-11-27 16:10:59,895 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:10:59,898 [INFO] options_bot - PAPER: SELL 20.7291 SPY @ $96.69 P&L: $1.34 (0.07%)
+2025-11-27 16:10:59,898 [INFO] options_bot - ✅ WIN: SPY
+P&L: $1.34 (0.07%)
+2025-11-27 16:11:00,555 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:00,558 [INFO] options_bot - PAPER: SELL 15.2181 QQQ @ $105.10 P&L: $-2.40 (-0.15%)
+2025-11-27 16:11:00,559 [INFO] options_bot - ❌ LOSS: QQQ
+P&L: $-2.40 (-0.15%)
+2025-11-27 16:11:05,168 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:05,169 [INFO] options_bot - PAPER: BUY 19.3218 QQQ @ $103.40 (cost: $2000.94)
+2025-11-27 16:11:05,169 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 19.3218
+Entry Price: $103.40
+2025-11-27 16:11:05,431 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:05,436 [INFO] options_bot - PAPER: BUY 14.1809 AAPL @ $112.67 (cost: $1600.15)
+2025-11-27 16:11:05,436 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 14.1809
+Entry Price: $112.67
+2025-11-27 16:11:05,750 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:05,754 [INFO] options_bot - PAPER: BUY 13.2143 SPY @ $96.69 (cost: $1279.64)
+2025-11-27 16:11:05,754 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 13.2143
+Entry Price: $96.69
+2025-11-27 16:11:06,022 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:06,039 [INFO] options_bot - PAPER: SELL 13.2143 SPY @ $100.85 P&L: $52.92 (4.14%)
+2025-11-27 16:11:06,039 [INFO] options_bot - ✅ WIN: SPY
+P&L: $52.92 (4.14%)
+2025-11-27 16:11:06,306 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:06,310 [INFO] options_bot - PAPER: SELL 14.1809 AAPL @ $108.11 P&L: $-66.99 (-4.19%)
+2025-11-27 16:11:06,310 [INFO] options_bot - ❌ LOSS: AAPL
+P&L: $-66.99 (-4.19%)
+2025-11-27 16:11:11,317 [ERROR] options_bot - Failed to send Telegram message to -5025887204: Timed out
+2025-11-27 16:11:11,319 [INFO] options_bot - PAPER: BUY 14.9822 AAPL @ $106.40 (cost: $1596.47)
+2025-11-27 16:11:11,320 [INFO] options_bot - 🟢 POSITION OPENED: AAPL
+Quantity: 14.9822
+Entry Price: $106.40
+2025-11-27 16:11:13,107 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:13,122 [INFO] options_bot - PAPER: SELL 19.3218 QQQ @ $110.58 P&L: $135.40 (6.78%)
+2025-11-27 16:11:13,123 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $135.40 (6.78%)
+2025-11-27 16:11:13,409 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:13,430 [INFO] options_bot - PAPER: BUY 15.4739 QQQ @ $109.96 (cost: $1704.00)
+2025-11-27 16:11:13,430 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.4739
+Entry Price: $109.96
+2025-11-27 16:11:13,723 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:13,725 [INFO] options_bot - PAPER: SELL 15.4739 QQQ @ $111.40 P&L: $19.74 (1.16%)
+2025-11-27 16:11:13,725 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $19.74 (1.16%)
+2025-11-27 16:11:14,006 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:14,020 [INFO] options_bot - PAPER: BUY 15.0070 QQQ @ $113.61 (cost: $1707.45)
+2025-11-27 16:11:14,020 [INFO] options_bot - 🟢 POSITION OPENED: QQQ
+Quantity: 15.0070
+Entry Price: $113.61
+2025-11-27 16:11:19,025 [ERROR] options_bot - Failed to send Telegram message to -5025887204: Timed out
+2025-11-27 16:11:19,029 [INFO] options_bot - PAPER: SELL 15.0070 QQQ @ $115.56 P&L: $26.76 (1.57%)
+2025-11-27 16:11:19,029 [INFO] options_bot - ✅ WIN: QQQ
+P&L: $26.76 (1.57%)
+2025-11-27 16:11:20,823 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:20,831 [INFO] options_bot - PAPER: BUY 18.5192 SPY @ $92.32 (cost: $1712.30)
+2025-11-27 16:11:20,831 [INFO] options_bot - 🟢 POSITION OPENED: SPY
+Quantity: 18.5192
+Entry Price: $92.32
+2025-11-27 16:11:21,105 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:21,133 [INFO] options_bot - PAPER: SELL 14.9822 AAPL @ $103.60 P&L: $-44.31 (-2.78%)
+2025-11-27 16:11:21,133 [INFO] options_bot - ❌ LOSS: AAPL
+P&L: $-44.31 (-2.78%)
+2025-11-27 16:11:21,396 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:21,399 [INFO] options_bot - PAPER: SELL 18.5192 SPY @ $95.76 P&L: $60.91 (3.56%)
+2025-11-27 16:11:21,399 [INFO] options_bot - ✅ WIN: SPY
+P&L: $60.91 (3.56%)
+2025-11-27 16:11:21,654 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 200 OK"
+2025-11-27 16:11:21,919 [INFO] httpx - HTTP Request: POST https://api.telegram.org/bot1917762725:AAEFBw_K62I09owCVvNRIBv0WGIZwHB4C-o/sendMessage "HTTP/1.1 429 Too Many Requests"
+2025-11-27 16:11:21,921 [ERROR] options_bot - Failed to send Telegram message to -5025887204: Flood control exceeded. Retry in 38 seconds
+2025-11-27 16:11:21,921 [INFO] options_bot - Daily summary sent via Telegram
+2025-11-27 16:11:21,922 [INFO] options_bot - Exported 10 trades to paper_trades_telegram.json

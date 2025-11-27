@@ -4,13 +4,19 @@ Demonstrates real-time notifications for all trades
 """
 import os
 from datetime import datetime, timedelta
+from pathlib import Path
 import random
+
+from dotenv import load_dotenv
 
 from src.paper_trading import PaperTrader
 from src.strategy import TradingStrategy
 from src.notifications.telegram import TelegramNotifier, NotificationConfig
 from src.strategy.trading_strategy import TradeSignal
 from src.core.logger import logger
+
+# Load environment variables from .env file
+load_dotenv(Path('.env'))
 
 
 def generate_sample_data():
@@ -70,17 +76,14 @@ def run_paper_trading_with_telegram(notifier=None):
         logger.info(msg)
         
         if notifier:
-            signal = TradeSignal(
-                symbol=pos_info['symbol'],
-                action='BUY',
-                confidence=85.0,
-                price=pos_info['price'],
-                timestamp=pos_info['timestamp'],
-                indicators={},
-                reason='Trading Strategy Signal'
-            )
             try:
-                notifier.send_trade_signal_sync(signal)
+                notifier.send_trade_signal_sync(
+                    symbol=pos_info['symbol'],
+                    action='BUY',
+                    price=pos_info['price'],
+                    confidence=85.0,
+                    indicators={}
+                )
             except Exception as e:
                 logger.warning(f"Could not send Telegram notification: {e}")
     
@@ -91,17 +94,14 @@ def run_paper_trading_with_telegram(notifier=None):
         logger.info(msg)
         
         if notifier:
-            signal = TradeSignal(
-                symbol=pos_info['symbol'],
-                action='SELL',
-                confidence=85.0,
-                price=pos_info.get('exit_price', 0),
-                timestamp=datetime.now(),
-                indicators={},
-                reason=f"Position Closed: P&L ${pos_info['pnl']:.2f}"
-            )
             try:
-                notifier.send_trade_signal_sync(signal)
+                notifier.send_trade_signal_sync(
+                    symbol=pos_info['symbol'],
+                    action='SELL',
+                    price=pos_info.get('exit_price', 0),
+                    confidence=85.0,
+                    indicators={}
+                )
             except Exception as e:
                 logger.warning(f"Could not send Telegram notification: {e}")
     
