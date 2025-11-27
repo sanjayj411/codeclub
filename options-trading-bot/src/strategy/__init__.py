@@ -3,6 +3,12 @@ from src.indicators import TechnicalIndicators
 from src.risk import RiskManager
 from src.core.logger import logger
 
+# Import TradingStrategy if available (created for backtesting)
+try:
+    from .trading_strategy import TradingStrategy
+except ImportError:
+    TradingStrategy = None
+
 class OptionsStrategy:
     """Options trading strategy using RSI and Bollinger Bands"""
     
