@@ -1,0 +1,25 @@
+# Stock Scanner Configuration
+# One symbol per line
+# Lines starting with # are ignored
+
+# Tech Giants
+AAPL
+MSFT
+GOOGL
+META
+NVDA
+
+# ETFs
+SPY
+QQQ
+IWM
+
+# Financials
+JPM
+BAC
+GS
+
+# Healthcare
+JNJ
+UNH
+PFE
