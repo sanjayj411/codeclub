@@ -467,3 +467,445 @@ P&L: $60.91 (3.56%)
 2025-11-27 16:11:21,921 [ERROR] options_bot - Failed to send Telegram message to -5025887204: Flood control exceeded. Retry in 38 seconds
 2025-11-27 16:11:21,921 [INFO] options_bot - Daily summary sent via Telegram
 2025-11-27 16:11:21,922 [INFO] options_bot - Exported 10 trades to paper_trades_telegram.json
+2025-11-27 19:19:30,260 [INFO] options_bot - PAPER: BUY 44.3053 AAPL @ $225.71 (cost: $10015.00)
+2025-11-27 19:19:30,260 [INFO] options_bot - PAPER: BUY 19.7074 META @ $405.79 (cost: $8009.00)
+2025-11-27 19:19:30,260 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,261 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,261 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,261 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,261 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,261 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,261 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,262 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,262 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,262 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,262 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,262 [INFO] options_bot - PAPER: SELL 19.7074 META @ $444.03 P&L: $740.56 (9.26%)
+2025-11-27 19:19:30,263 [INFO] options_bot - PAPER: SELL 44.3053 AAPL @ $240.30 P&L: $630.64 (6.31%)
+2025-11-27 19:19:30,263 [INFO] options_bot - PAPER: BUY 43.1273 AAPL @ $238.11 (cost: $10284.25)
+2025-11-27 19:19:30,263 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,265 [INFO] options_bot - PAPER: SELL 43.1273 AAPL @ $243.60 P&L: $221.29 (2.15%)
+2025-11-27 19:19:30,266 [INFO] options_bot - PAPER: BUY 31.0993 NFLX @ $331.52 (cost: $10325.48)
+2025-11-27 19:19:30,267 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,267 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,267 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,268 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,268 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,268 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,269 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,269 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,269 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,270 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,270 [INFO] options_bot - PAPER: BUY 36.7054 AAPL @ $224.62 (cost: $8257.29)
+2025-11-27 19:19:30,270 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,270 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,271 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,271 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,271 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,271 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,271 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,272 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,272 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,272 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,272 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,273 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,273 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,273 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,273 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,273 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,274 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,274 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,275 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,275 [INFO] options_bot - PAPER: SELL 36.7054 AAPL @ $273.39 P&L: $1774.76 (21.53%)
+2025-11-27 19:19:30,275 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,275 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,276 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,276 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,280 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,280 [INFO] options_bot - PAPER: BUY 18.3108 META @ $469.53 (cost: $8610.30)
+2025-11-27 19:19:30,280 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,281 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,281 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,281 [INFO] options_bot - PAPER: BUY 53.1381 GOOGL @ $129.39 (cost: $6885.65)
+2025-11-27 19:19:30,281 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,281 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,282 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,282 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,282 [INFO] options_bot - PAPER: BUY 24.0391 AAPL @ $228.72 (cost: $5506.46)
+2025-11-27 19:19:30,282 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,282 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,282 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,282 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,283 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,283 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,284 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,284 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,284 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,284 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,284 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:30,286 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,287 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:30,287 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,287 [INFO] options_bot - PAPER: SELL 18.3108 META @ $488.20 P&L: $328.51 (3.82%)
+2025-11-27 19:19:30,287 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,288 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,288 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,288 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,288 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,289 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:30,289 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:30,289 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,592 [INFO] options_bot - PAPER: BUY 34.5687 NFLX @ $289.28 (cost: $10015.00)
+2025-11-27 19:19:40,593 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,593 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,593 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,593 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,594 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,594 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,594 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,594 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,595 [INFO] options_bot - PAPER: SELL 34.5687 NFLX @ $301.75 P&L: $415.38 (4.15%)
+2025-11-27 19:19:40,595 [INFO] options_bot - PAPER: BUY 34.3863 NFLX @ $293.14 (cost: $10095.20)
+2025-11-27 19:19:40,596 [INFO] options_bot - PAPER: BUY 27.0880 AAPL @ $297.59 (cost: $8073.13)
+2025-11-27 19:19:40,596 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,596 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,596 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,596 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,596 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,597 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,597 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,597 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,597 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,598 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,598 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,598 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,598 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,599 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,599 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,599 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,600 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,600 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,600 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,600 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,601 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,601 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,601 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,601 [INFO] options_bot - PAPER: BUY 14.7461 META @ $437.16 (cost: $6456.08)
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,602 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,603 [INFO] options_bot - PAPER: BUY 40.2120 GOOGL @ $128.20 (cost: $5162.93)
+2025-11-27 19:19:40,603 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,604 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,605 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,605 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,605 [INFO] options_bot - PAPER: SELL 27.0880 AAPL @ $273.24 P&L: $-670.70 (-8.32%)
+2025-11-27 19:19:40,605 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:40,605 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,606 [INFO] options_bot - PAPER: SELL 34.3863 NFLX @ $333.60 P&L: $1374.06 (13.63%)
+2025-11-27 19:19:40,606 [INFO] options_bot - PAPER: SELL 40.2120 GOOGL @ $122.37 P&L: $-242.01 (-4.69%)
+2025-11-27 19:19:40,606 [INFO] options_bot - PAPER: SELL 14.7461 META @ $490.69 P&L: $778.47 (12.08%)
+2025-11-27 19:19:40,606 [INFO] options_bot - PAPER: BUY 89.2182 GOOGL @ $115.66 (cost: $10334.60)
+2025-11-27 19:19:40,606 [INFO] options_bot - PAPER: BUY 29.4571 AAPL @ $280.14 (cost: $8264.58)
+2025-11-27 19:19:40,606 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,607 [INFO] options_bot - PAPER: SELL 29.4571 AAPL @ $286.14 P&L: $164.08 (1.99%)
+2025-11-27 19:19:40,607 [INFO] options_bot - PAPER: SELL 89.2182 GOOGL @ $114.68 P&L: $-102.95 (-1.00%)
+2025-11-27 19:19:40,607 [INFO] options_bot - PAPER: BUY 88.1154 GOOGL @ $117.18 (cost: $10341.26)
+2025-11-27 19:19:40,608 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,608 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,608 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,609 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,609 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,610 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,610 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,610 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,611 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,611 [INFO] options_bot - PAPER: BUY 27.1538 AAPL @ $304.10 (cost: $8269.91)
+2025-11-27 19:19:40,611 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,612 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,612 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,612 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,613 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,613 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,613 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,614 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,614 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,614 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:40,615 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:40,615 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,409 [INFO] options_bot - PAPER: BUY 21.7944 META @ $458.83 (cost: $10015.00)
+2025-11-27 19:19:48,409 [INFO] options_bot - PAPER: BUY 23.0130 NFLX @ $347.50 (cost: $8009.00)
+2025-11-27 19:19:48,409 [INFO] options_bot - PAPER: BUY 53.5458 GOOGL @ $119.43 (cost: $6404.79)
+2025-11-27 19:19:48,409 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,409 [INFO] options_bot - PAPER: BUY 22.7766 AAPL @ $224.54 (cost: $5121.91)
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,410 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,411 [INFO] options_bot - PAPER: SELL 22.7766 AAPL @ $225.46 P&L: $13.25 (0.26%)
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,411 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,412 [INFO] options_bot - PAPER: SELL 23.0130 NFLX @ $371.14 P&L: $531.31 (6.64%)
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,412 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,413 [INFO] options_bot - PAPER: BUY 19.3752 NFLX @ $352.05 (cost: $6831.25)
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,413 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,414 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,415 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,415 [INFO] options_bot - PAPER: SELL 21.7944 META @ $484.30 P&L: $539.21 (5.39%)
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,416 [INFO] options_bot - PAPER: BUY 16.7134 META @ $452.49 (cost: $7573.96)
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,416 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,417 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,417 [INFO] options_bot - PAPER: SELL 53.5458 GOOGL @ $106.12 P&L: $-721.29 (-11.28%)
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,418 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,419 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,419 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,419 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,419 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,419 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,419 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,420 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,420 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,420 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,420 [INFO] options_bot - PAPER: BUY 34.5005 AAPL @ $208.19 (cost: $7193.38)
+2025-11-27 19:19:48,420 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,420 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,421 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,422 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,423 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,423 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,423 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,423 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,423 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,424 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,424 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,424 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,424 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,424 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,424 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,425 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,425 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,425 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,425 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,425 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,426 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,426 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,426 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,426 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,426 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,426 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,427 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,427 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,427 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,427 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,427 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,427 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,428 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,428 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,428 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,428 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,428 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:19:48,428 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,429 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,429 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,429 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,429 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,430 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,430 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,430 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,430 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,431 [INFO] options_bot - PAPER: SELL 34.5005 AAPL @ $238.15 P&L: $1021.33 (14.22%)
+2025-11-27 19:19:48,431 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,431 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,431 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,431 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,432 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,432 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,432 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,432 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,433 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,433 [INFO] options_bot - PAPER: SELL 16.7134 META @ $446.26 P&L: $-115.20 (-1.52%)
+2025-11-27 19:19:48,433 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,433 [INFO] options_bot - PAPER: BUY 20.7172 META @ $428.35 (cost: $8887.51)
+2025-11-27 19:19:48,434 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,434 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,434 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:19:48,434 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:19:48,434 [WARNING] options_bot - Position already exists for NFLX
+2025-11-27 19:20:00,633 [INFO] options_bot - PAPER: BUY 60.6973 GOOGL @ $164.75 (cost: $10015.00)
+2025-11-27 19:20:00,634 [INFO] options_bot - PAPER: BUY 30.6209 AAPL @ $261.16 (cost: $8009.00)
+2025-11-27 19:20:00,634 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,634 [INFO] options_bot - PAPER: SELL 30.6209 AAPL @ $268.63 P&L: $216.31 (2.70%)
+2025-11-27 19:20:00,634 [INFO] options_bot - PAPER: SELL 60.6973 GOOGL @ $173.29 P&L: $502.67 (5.03%)
+2025-11-27 19:20:00,634 [INFO] options_bot - PAPER: BUY 60.2242 GOOGL @ $168.34 (cost: $10153.60)
+2025-11-27 19:20:00,635 [INFO] options_bot - PAPER: SELL 60.2242 GOOGL @ $176.26 P&L: $461.09 (4.55%)
+2025-11-27 19:20:00,635 [INFO] options_bot - PAPER: BUY 59.8847 GOOGL @ $170.79 (cost: $10242.91)
+2025-11-27 19:20:00,635 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,636 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,637 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,637 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,637 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,637 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,638 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,638 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,638 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,638 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,639 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,639 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,639 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,640 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,640 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,640 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,641 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,641 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,641 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,642 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,642 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,642 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,642 [INFO] options_bot - PAPER: BUY 29.1056 AAPL @ $281.01 (cost: $8191.26)
+2025-11-27 19:20:00,643 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,643 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,643 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,643 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,643 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,643 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,644 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,644 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,644 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,644 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,644 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,645 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,645 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,645 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,645 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,645 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,645 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,646 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,646 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,646 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,646 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,646 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,647 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,647 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,647 [WARNING] options_bot - Position already exists for AAPL
+2025-11-27 19:20:00,648 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,649 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,649 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,649 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,650 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,650 [INFO] options_bot - PAPER: SELL 29.1056 AAPL @ $349.03 P&L: $1964.54 (24.02%)
+2025-11-27 19:20:00,650 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,651 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,651 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,651 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,652 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,652 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,653 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,653 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,653 [INFO] options_bot - PAPER: BUY 18.1080 META @ $473.24 (cost: $8582.30)
+2025-11-27 19:20:00,653 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,654 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:20:00,654 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,654 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:20:00,654 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,654 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:20:00,655 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,655 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:20:00,655 [WARNING] options_bot - Position already exists for GOOGL
+2025-11-27 19:20:00,655 [WARNING] options_bot - Position already exists for META
+2025-11-27 19:20:00,656 [WARNING] options_bot - Position already exists for GOOGL
